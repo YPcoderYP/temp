@@ -3,6 +3,8 @@ const path = require("path");
 const requests = require("requests");
 const bodyParser = require('body-parser');
 const app = express();
+const port = process.env.PORT || 8000;
+
 
 app.set("view engine", "hbs");
 
@@ -65,6 +67,6 @@ app.get("*", (req, res) => {
 
 
 
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log("started");
 });
