@@ -38,7 +38,7 @@ app.get("*", (req, res) => {
                 });
         });
     };
- 
+
     app.post("/userinput", urlencodedParser, (req, res) => {
         
         let city = req.body.city;
