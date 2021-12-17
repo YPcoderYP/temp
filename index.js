@@ -83,7 +83,8 @@ app.get("/*", (req, res) => {
                     speed: data[0].wind.speed,
                     Humidity: data[0].main.humidity,
                     location: data[0].name,
-                    country: data[0].sys.country, 
+                    country: data[0].sys.country,
+                    tempstatus:data[0].weather.main,
                 });
         });
     };
@@ -102,7 +103,7 @@ app.get("/*", (req, res) => {
                     speed: data[0].wind.speed,
                     Humidity: data[0].main.humidity,
                     location: data[0].name,
-                    country: data[0].sys.country, 
+                    country: data[0].sys.country,
                 });
         }).on("error", (err) => {
             console.log("city not found");

@@ -44,7 +44,7 @@
     <script>
         const cdate=document.getElementById("date");
         let weathercon=document.getElementById("weathercon");
-        const tempstatus="{%tempstatus%}";
+        const tempstatus="{{tempstatus}}";
 
         
         const gettime=()=>{
@@ -96,7 +96,7 @@
                 {
                     min='0'+min;
                 }
-
+                console.log(tempstatus);
                 let cloud=document.getElementById("cloud");
                 let sun=document.getElementById("sun");
                 if(tempstatus=="Clouds")
